@@ -1,0 +1,9 @@
+
+Q: Find the names of employees working in the "Sales" department.
+
+Join Employee and Department on deptId
+Employee⨝Employee.deptId=Department.deptId​Department
+Select rows where deptName = "Sales"
+σdeptName="Sales"​(Employee⨝Department)
+Project only employee names
+πname​(σdeptName="Sales"​(Employee⨝Department))
